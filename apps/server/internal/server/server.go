@@ -1,4 +1,4 @@
-package http
+package server
 
 import (
 	"net/http"
@@ -20,12 +20,6 @@ func NewServer() *Server {
 	s.registerRoutes()
 
 	return s
-}
-
-func (s *Server) registerRoutes() {
-	s.router.Get("/health", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("ok"))
-	})
 }
 
 func (s *Server) Start(addr string) error {

@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	server "github.com/murilorrs/paycore/apps/server/internal/http"
+	"github.com/murilorrs/paycore/apps/server/internal/server"
 )
 
 func main() {
@@ -14,5 +14,4 @@ func main() {
 	if err := server.Start(":8000"); err != nil {
 		log.Fatal(err)
 	}
-
 }
